@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+    <meta name="viewport" content="width=device-width,intial scale=1">
+</head>
+
+<body>
+    <nav>
+        <main>
+            <section style="display: flex;justify-content: space-between;">
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="about.html">關於我們</a>
+                    <a href="index.html">首頁</a>
+                    <a href="item.html#top">上衣</a>
+                    <a href="item.html#coat">外套</a>
+                    <a href="item.html#button">褲子&裙子</a>
+                    <a href="item.html#accessory">配件</a>
+                    <br><br><br><br>
+                    <hr>
+                    <a href="login.html">登入</a>
+                    <a href="enroll.html">註冊</a>
+                </div>
+
+                <button class="openbtn" onclick="openNav()">&#9776; </button>
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidepanel").style.width = "250px";
+                    }
+                    function closeNav() {
+                        document.getElementById("mySidepanel").style.width = "0";
+                    }
+                </script>
+                <img class="logo" src="../assets/images/logo.png" alt="">
+                <h1 class="mw">Miss Wise</h1>
+
+                <form action="post">
+                    <a href="center.html"><img class="icon" src="../assets/images/me.png" alt="個資"></a>
+                    <a href="shopcar.html"><img class="icon" src="../assets/images/car.png" alt="購物車"></a>
+                    <input type="search" class="iconbox">
+                    <botton><img class="iconser" src="../assets/images/search.png" alt="搜尋"></botton>
+                </form>
+            </section>
+    </nav>
+    <hr class="titlehr"><br>
+    <h1>購物車</h1>
+    <form action="post">
+        <section>
+            <div class="shopcontainer">
+                <input type="checkbox" class="cb">
+                <div class="shopscreen">
+                    <img src="../assets/images/hairband1.jpg" style="float:left;width: 150px;height: 200px;">
+                    <div style="font-size: 20px;">
+                        <p>寬版髮箍 ( 紫 )</p>    <!--改商品名稱-->
+                        <p>價錢:NT.120</p> <!--改價錢-->
+                        <p>數量: 
+                            <select size="1" name="d1" style="padding: 3px;">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                <img src="../assets/images/delete.jpg" class="trashcan" alt="">
+                <hr>
+                <input type="checkbox" class="cb">
+                <div class="shopscreen" style="clear: both;">
+                    <img src="../assets/images/longskirt2.jpg" style="float:left;width: 150px;height: 200px;">
+                    <div style="font-size: 20px;">
+                        <p>華夫格休閒長裙 ( 灰 )</p>    <!--改商品名稱-->
+                        <p>價錢:NT.510</p> <!--改價錢-->
+                        <p>數量: 
+                            <select size="1" name="d1" style="padding: 3px;">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                <img src="../assets/images/delete.jpg" class="trashcan" alt="">
+            </div>
+            <a href="index.html"><input type="button" class="shopbutton" value="繼續購物"></a>
+            <a href="order.html"><input type="button" class="shopbutton" value="去結帳"></a>
+
+        </section>
+    </form>
+    <br>
+    <footer id="contact">
+        <p>Copyright &copy Miss Wise <br>瀏覽次數:10<br>From:CYCUIM</p>
+    </footer>
+</body>
+
+</html>

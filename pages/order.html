@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <title>訂單</title>
+    <script>
+        function inc(num){
+            let value=Number(document.getElementsByClassName("num")[num].value);
+            document.getElementsByClassName("num")[num].value=value+1;
+        }
+        function dec(num){
+            let value=Number(document.getElementsByClassName("num")[num].value);
+            if(value>0){
+            document.getElementsByClassName("num")[num].value=value-1;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <main>
+            <section style="display: flex;justify-content: space-between;">
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="about.html">關於我們</a>
+                    <a href="index.html">首頁</a>
+                    <a href="item.html#top">上衣</a>
+                    <a href="item.html#coat">外套</a>
+                    <a href="item.html#button">褲子&裙子</a>
+                    <a href="item.html#accessory">配件</a>
+                    <br><br><br><br>
+                    <hr>
+                    <a href="login.html">登入</a>
+                    <a href="enroll.html">註冊</a>
+                </div>
+
+                <button class="openbtn" onclick="openNav()">&#9776; </button>
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidepanel").style.width = "250px";
+                    }
+                    function closeNav() {
+                        document.getElementById("mySidepanel").style.width = "0";
+                    }
+                </script>
+                <img class="logo" src="../assets/images/logo.png" alt="">
+                <h1 class="mw">會員中心</h1>
+                <form action="post">
+                    <a href="center.html"><img class="icon" src="../assets/images/me.png" alt="個資"></a>
+                    <a href="shopcar.html"><img class="icon" src="../assets/images/car.png" alt="購物車"></a>
+                    <a href="#">
+                    <input type="search" class="iconbox">
+                    <botton><img class="iconser" src="../assets/images/search.png" alt="搜尋"></botton>
+                    </a>
+                </form>
+            </section>
+    </nav>
+    <hr class="titlehr"><br>
+    <section>
+        <p class="membertitle"><a href="center.html">個人資訊</a> <a href="order.html">訂單</a> <a href="track.html">追蹤</p></a><br>
+        <div id="order">
+            <table class="option">
+                <tr>
+                    <td class="ordertext"><a href="order.html">待付款</a></td>
+                    <td class="ordertext"><a href="finished.html">已完成</a></td>
+                    <td class="ordertext"><a href="finished.html">我的評價</a></td>
+                </tr>
+            </table>
+            <div class="shopcontainer">
+                <h3 class="h3title">編號<p style="color:gray;">CYCU123</p></h3> <!--編號-->
+                <hr>
+                <div class="shopscreen"> <!--購買商品-->
+                    <img src="../assets/images/Bbrathin_1.jpg" style="float:left;width: 150px;height: 200px;">
+                    <div style="font-size: 20px;">
+                        <p>細肩帶發熱bra top（黑）</p>
+                        <p>價格:NT.290</p>
+                        <p>數量: 
+                            <select size="1" name="d1" style="padding: 4px;">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </p>  
+                    </div>
+                    <p class="subtotal">小計: NT.290</p>
+                </div>
+                <hr>
+                <div class="shopscreen">
+                    <img src="../assets/images/jacket_1.jpg" style="float:left;width: 150px;height: 200px;">
+                    <div style="font-size: 20px;">
+                        <p>氣質長款風衣（附腰帶）</p>
+                        <p>價格:NT.890</p>
+                        <p>數量: 
+                            <select size="1" name="d1" style="padding: 4px;">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </p>                        
+                    </div>
+                    <p class="subtotal">小計: NT.890</p>
+                    
+                </div>
+                <hr>
+                <div class="info0"> <!--總計-->
+                    <p>優惠:無</p><br>
+                    <p>運費:NT.60</p><br>
+                    <p>總計:NT.1240</p>
+                </div>
+                <hr style="clear: right;">
+                <div>  <!--顧客資料-->
+                  <h3 class="h3title">顧客資料</h3>
+                    <div class="info">
+                        <p>姓名 <input type="text" size="20"></p><br>
+                        <p>信箱 <input type="text" size="20"></p><br>
+                        <p>電話 <input type="text" size="20"></p><br>
+                        <p>地址 <input type="text" size="80"></p>
+                    </div>
+                </div>
+                <hr>
+                <div>  <!--送貨資訊-->
+                    <h3 class="h3title">送貨資訊</h3>
+                    <p class="info"><input type="radio"> 郵寄</p>
+                    <p class="info">地址<input type="text"></p>
+                    <p class="info"><input type="radio"> 7-11超商取貨</p>
+                    <p class="info">輸入門市<input type="text"></p>
+                </div>
+                <hr>
+                <div>  <!--收件人資訊-->
+                    <h3 class="h3title">收件人資訊</h3>
+                      <div class="info">
+                          <p>姓名 <input type="text" size="20"></p><br>
+                          <p>信箱 <input type="text" size="20"></p><br>
+                          <p>電話 <input type="text" size="20"></p><br>
+                      </div>
+                </div>
+                <hr>
+                <div> <!--付款方式-->
+                    <h3 class="h3title">付款方式</h3>
+                    <p class="info"><input type="radio">貨到付款</p>
+                    <p class="info"><input type="radio">信用卡</p>
+                </div>
+                <hr>
+                <div> <!--發票-->
+                    <h3 class="h3title">發票</h3>
+                    <p class="info"><input type="radio">載具   <input type="text" size="20" value="  /"></p>
+                    <p class="info"><input type="radio">紙本</p>
+                </div>
+            </div>
+            <div>
+                <a href="shopcar.html"><input type="button" class="orderbutton" value="回上頁"></a>
+                <a href="order.html"><input type="button" class="orderbutton" value="送出訂單"></a>
+            </div>
+            
+    </section>
+</body>
+
+</html>
